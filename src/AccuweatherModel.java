@@ -25,7 +25,6 @@ public class AccuweatherModel implements WeatherModel {
     private static final OkHttpClient okHttpClient = new OkHttpClient();
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    private DataBaseRepository dataBaseRepository = new DataBaseRepository();
 
     public void getWeather(String selectedCity, Period period) throws IOException {
         switch (period) {
@@ -56,11 +55,6 @@ public class AccuweatherModel implements WeatherModel {
                 //TODO*: реализовать вывод погоды на 5 дней
                 break;
         }
-    }
-
-    @Override
-    public List<Weather> getSavedToDBWeather() {
-        return dataBaseRepository.getSavedToDBWeather();
     }
 
     private String detectCityKey(String selectCity) throws IOException {

@@ -16,8 +16,6 @@ public class UserInterfaceView {
 
             String command = scanner.nextLine();
 
-            //TODO* Сделать метод валидации пользовательского ввода
-
             if (command.equals("0")) break;
 
             try {
